@@ -30,14 +30,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.luisperez.app_vial.ui.theme.backgroundColor
+import com.luisperez.app_vial.ui.theme.buttonColor
+import com.luisperez.app_vial.ui.theme.cardColors
+import com.luisperez.app_vial.ui.theme.white
 
-//TEMPORAL
-val backgroundColor = Color(0xFF263238)
-val buttonColor = Color(0xFF46464E)
-val cardColors = Color(0xFFD9D9D9)
-val white = Color.White
 
-@Preview(showBackground = true)
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RegisterView() {
