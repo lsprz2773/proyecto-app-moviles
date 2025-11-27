@@ -1,6 +1,5 @@
 package com.luisperez.app_vial.ui.views
 
-import androidx.compose.animation.expandVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -36,25 +35,28 @@ import com.luisperez.app_vial.ui.theme.buttonColor
 import com.luisperez.app_vial.ui.theme.cardColors
 import com.luisperez.app_vial.ui.theme.white
 
-@Preview(showBackground = true)
+
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LoginView() {
+fun RegisterView() {
     Scaffold(
-        containerColor = backgroundColor
-    ) {
+        containerColor = backgroundColor,
+
+        ) {
         Box(
             modifier = Modifier
                 .padding(vertical = 100.dp)
                 .padding(horizontal = 20.dp)
         ) {
-            LoginContent(it)
+            RegisterContent(it)
         }
     }
 }
 
 @Composable
-fun LoginContent(paddingValues: PaddingValues) {
+fun RegisterContent(paddingValues: PaddingValues) {
+    var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
 
@@ -74,17 +76,41 @@ fun LoginContent(paddingValues: PaddingValues) {
                 modifier = Modifier
                     .height(50.dp)
             )
-            Text("Inicia sesión", fontWeight = FontWeight.Bold, fontSize = 24.sp)
+            Text("Regístrate", fontWeight = FontWeight.Bold, fontSize = 24.sp)
 
             Spacer(
                 modifier = Modifier
-                    .padding(top = 20.dp)
+                    .padding(top = 50.dp)
             )
-            Text(text = "Ingresa a una cuenta existente", fontSize = 14.sp)
+            Text(text = "Crea una cuenta para continuar", fontSize = 14.sp)
 
+            Spacer(modifier = Modifier.height(20.dp))
+
+            Text(
+                text = "Nombre",
+                fontSize = 14.sp,
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.fillMaxWidth()
+            )
+            OutlinedTextField(
+                value = name,
+                onValueChange = { name = it },
+                label = { Text("Ej. Alejandro") },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 4.dp),
+                shape = RoundedCornerShape(8.dp),
+                colors = OutlinedTextFieldDefaults.colors(
+                    white,
+                    unfocusedContainerColor = Color.White,
+                    focusedContainerColor = Color.White,
+                    unfocusedBorderColor = Color.Transparent,
+                    focusedBorderColor = Color.Transparent
+                )
+            )
             Spacer(
                 modifier = Modifier
-                    .height(30.dp)
+                    .height(20.dp)
             )
             Text(
                 text = "Correo electrónico",
@@ -147,7 +173,7 @@ fun LoginContent(paddingValues: PaddingValues) {
                 shape = RoundedCornerShape(5.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = buttonColor)
             ) {
-                Text("Iniciar sesión")
+                Text("Registrarse")
             }
 
             Row(
@@ -155,7 +181,7 @@ fun LoginContent(paddingValues: PaddingValues) {
                 modifier = Modifier
                     .padding(top = 10.dp)
             ) {
-                Text("¿Aún no tienes cuenta?")
+                Text("¿Ya tienes una cuenta?")
                 Spacer(
                     modifier = Modifier
                         .padding(15.dp)
@@ -166,7 +192,7 @@ fun LoginContent(paddingValues: PaddingValues) {
                     shape = RoundedCornerShape(5.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Transparent)
                 ) {
-                    Text("Regístrate", color = Color.Black, fontWeight = FontWeight.Medium)
+                    Text("Inicia sesión", color = Color.Black, fontWeight = FontWeight.Medium)
                 }
             }
         }

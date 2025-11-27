@@ -10,14 +10,7 @@ val Purple40 = Color(0xFF6650a4)
 val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
-
-//MiS cOlOrEs
-
-val darkBackground = Color(0xFF26353D)
-val cardsBackground = Color(0xFF40484D)
-val cardsHover = Color(0xFF364955)
-val textHover = Color(0xFFCADEED)
-val cardsText = Color(0xFFBFC6CC)
-val navbarSelection = Color(0xFF374955)
-val iconsColor = Color(0xFFC0C7CD)
-val iconHover = Color(0xFFD1E5F4)
+val backgroundColor = Color(0xFF263238)
+val buttonColor = Color(0xFF46464E)
+val cardColors = Color(0xFFD9D9D9)
+val white = Color.White
