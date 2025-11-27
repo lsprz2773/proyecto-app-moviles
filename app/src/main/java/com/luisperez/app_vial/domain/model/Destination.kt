@@ -9,5 +9,5 @@ enum class Destination(
     val icon: ImageVector,
     val contentDescription: String
 ) {
-    HOME("Home", "Inicio", Icons.Rounded.)
+//    HOME("Home", "Inicio", Icons.Rounded.)
 }

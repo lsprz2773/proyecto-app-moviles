@@ -36,7 +36,6 @@ import com.luisperez.app_vial.ui.theme.buttonColor
 import com.luisperez.app_vial.ui.theme.cardColors
 import com.luisperez.app_vial.ui.theme.white
 
-@Preview(showBackground = true)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LoginView() {
