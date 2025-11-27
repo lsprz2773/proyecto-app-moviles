@@ -1,7 +1,9 @@
 package com.luisperez.app_vial.ui.theme
 
 import androidx.compose.material3.Typography
+import androidx.compose.ui.text.R
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
@@ -31,4 +33,13 @@ val Typography = Typography(
         letterSpacing = 0.5.sp
     )
     */
+)
+
+val montserratFamily = FontFamily(
+    Font(com.luisperez.app_vial.R.font.montserrat_bold, FontWeight.Bold),
+    Font(com.luisperez.app_vial.R.font.montserrat_thin, FontWeight.Thin),
+    Font(com.luisperez.app_vial.R.font.montserrat_black, FontWeight.Black),
+    Font(com.luisperez.app_vial.R.font.montserrat_medium, FontWeight.Medium),
+    Font(com.luisperez.app_vial.R.font.montserrat_extrabold, FontWeight.ExtraBold),
+    Font(com.luisperez.app_vial.R.font.montserrat_regular, FontWeight.W400)
 )
